@@ -132,9 +132,6 @@ var startGame = function() {
   endGame();
 };
 
-// start the game when the page loads
-startGame();
-
 // function to end the entire game
 var endGame = function() {
   //if player is still alive, player wins!
@@ -191,18 +188,20 @@ var shop = function() {
       else {
         window.alert("You don't have enough money!");
       }
-        break;
-        case "LEAVE":
-        case "leave":
+      break;
+      case "LEAVE":
+      case "leave":
           window.alert("leaving the store.");
 
           // do nothing, so function will end
-          break;
-          default:
+        break;
+      default:
             window.alert("You did not pick a valid option. Try again.");
 
             //call shop() again to force player to pick a valid option
-            shop();
-            break;
+          shop();
+          break;
   }
 };
+// start the game when the page loads
+startGame();
